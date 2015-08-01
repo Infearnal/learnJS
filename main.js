@@ -1,22 +1,31 @@
 function init() {
 
-    console.log(typeof String(455) ); //
-    console.log(typeof Number('455') ); //
-    console.log(typeof Boolean(0)); //
+    //литерал обьект
+    var obj = {
+        //ключ: значение
+        name: 'Roman',
+        func: function() {
+            console.log(this.name);
+        }
+    };
+    // console.log(obj.name); //точечная нотация
+    // console.log(obj['name']); //нотация квадратных скобок
 
-    console.log(typeof (5 * '1')); //
+    // console.log(obj.lastName || "Chumychov"); //задать несущ. свойства
 
-    console.log(typeof (234234 + '')); //быстро в строку
-    console.log(typeof (+'123123')); //быстро в число
-    console.log(+''); //
-    console.log(+true); //
-    console.log(+false); //
-    console.log(typeof (!!'24')); //быстро в Boolean
+    //присвоение
+    obj.old = 29;
+    obj.name = 'R';
+    // console.log(obj);
 
-    var num = 777;
-    console.log(typeof num.toString());
+    //обьекты передаются по ссылкам они не копируются!!!!
 
-    console.log(parseInt('100.1px')); //парсит число
-    console.log(parseFloat('123.14px')); //парсит число с плавающей точкой
+    //удаление свойств
+    // delete obj.old;
+    // console.log(obj);
+    // obj.func();
+    var MYAPP = {
+        
+    };
 }
 window.onload = init;
