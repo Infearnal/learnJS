@@ -1,61 +1,25 @@
 function init() {
-    // var statement; //инструкции
-    // statement = 5 + 2; //выражения
 
-    //ВЫРАЖЕНИЯ
+    var num = 234,
+        inf = Infinity;
 
-    //арифметические (основные)
-    // 2+3 //5
-    // 5-4 //1
-    // 2*2 //4
-    // 6/2 //3
-    // 5%2 //1
+    // console.log(num.toFixed());
+    // console.log(num.toExponential());
+    // console.log(num.toPrecision(6));
+    // console.log(num.toString());
 
-    // (2+3)*5 //25
+    // console.log(Math.sqrt(81)); //вычисление корня
+    // console.log(Math.pow(5, 2)); //возведение в степень
+    // console.log(Math.floor(5)); //округляет вниз
+    // console.log(Math.ceil(5)); //округляет вверх
+    // console.log(Math.round(5)); //округляет до ближайшего
+    // console.log(Math.PI(5)); //3,14
+    // console.log(0/0); //NaN - число нельзя вычислить
+    // console.log(isNaN(NaN)); //проверяет является ли значение NaN
 
-    // = //присваивание
-
-    // ++i; //инкремент (префиксная форма)
-    // b++; //постфиксная форма
-    // --i; //дикримент
-    // var i = 2,
-    //     b = 2;
-    // console.log(i++);
-    // console.log(++b);
-
-    //сравнения 
-    // a > b;
-    // a < b;
-    // a >= b;
-    // a <= b;
-    // a === b;
-    // a !== b;
-
-    //условные
-    // if else, ?
-    var age = 18;
-    // if(age === 18) {
-    //     console.log("you are eighteen");
-    // } else if(age === 24) {
-    //     console.log("you are not eighteen");
-    // } else {
-    //     console.log("take a beer mather fucker");
-    // }
-
-    // (age === 18) ? console.log('you are eighteen') :
-    //                 (age === 24) ? console.log('you are not eighteen') :
-    //                        console.log("take a beer mather fucker");
-
-    //логические
-    // || // или
-    // && // и
-    // ! // не
-    if(age >= 18 && age <= 50) {
-        console.log('youre old man');
-    } else {
-        console.log("youre a young man");
-    }
-
+    // console.log(1/0); // Infinity
+    // console.log(-1/0); // -Infinity
+    console.log(inf > 32432432432);
 
 }
 window.onload = init;
