@@ -1,31 +1,32 @@
 function init() {
 
-    //литерал обьект
-    var obj = {
-        //ключ: значение
-        name: 'Roman',
-        func: function() {
-            console.log(this.name);
-        }
-    };
-    // console.log(obj.name); //точечная нотация
-    // console.log(obj['name']); //нотация квадратных скобок
+    var arr = [1, 2, 'str', {}];
+    // console.log(arr[2]);
 
-    // console.log(obj.lastName || "Chumychov"); //задать несущ. свойства
+    //add
+    arr[399] = 'fock';
+    console.log(arr.length);
 
-    //присвоение
-    obj.old = 29;
-    obj.name = 'R';
-    // console.log(obj);
+    //delete
+    delete arr[1]; //создает дырку
+    arr.splice(1, 1); //delete
+    // console.log(arr);
+    arr.length; //длина 
+    var matrix = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ];
+    // console.log(matrix[0][1]);
+    var newArr = arr.concat(matrix); //обьеденяет массивы
+    arr.join('| '); //преобразует в строку и разделяет чемто
+    arr.push('fock'); //доб. последний элемент
+    arr.pop('fock'); //delete последний элемент
+    arr.unshift('fock'); //доб. первый элемент
+    arr.shift('fock'); //delete перавый элемент
+    arr.reverse(); //наоборот
+    arr.slice(1, 2); //с какого по какой index вырезать
+    arr.sort(); //сортирует массив(неправильно числа)
 
-    //обьекты передаются по ссылкам они не копируются!!!!
-
-    //удаление свойств
-    // delete obj.old;
-    // console.log(obj);
-    // obj.func();
-    var MYAPP = {
-        
-    };
 }
 window.onload = init;
