@@ -1,25 +1,23 @@
 function init() {
 
-    var num = 234,
-        inf = Infinity;
-
-    // console.log(num.toFixed());
-    // console.log(num.toExponential());
-    // console.log(num.toPrecision(6));
-    // console.log(num.toString());
-
-    // console.log(Math.sqrt(81)); //вычисление корня
-    // console.log(Math.pow(5, 2)); //возведение в степень
-    // console.log(Math.floor(5)); //округляет вниз
-    // console.log(Math.ceil(5)); //округляет вверх
-    // console.log(Math.round(5)); //округляет до ближайшего
-    // console.log(Math.PI(5)); //3,14
-    // console.log(0/0); //NaN - число нельзя вычислить
-    // console.log(isNaN(NaN)); //проверяет является ли значение NaN
-
-    // console.log(1/0); // Infinity
-    // console.log(-1/0); // -Infinity
-    console.log(inf > 32432432432);
-
+    var str = "asdf лор дфр пдфывпр фдыв",
+        str2 = 'asdf',
+        str3 = "asdf \"sadf\" asgaetr",
+        longStr = "adfasdf \n \t string \t fuck \n asdg";
+    
+    // console.log(longStr);
+    // console.log(str3.length);
+    // console.log('hello ' + 'world');
+    // console.log('hello' .concat('world'));
+    // console.log(str.charAt(1));
+    // console.log(str.charCodeAt(1));
+    // console.log(str.substring(1, 3)); //обрезает с какого по какой символа
+    // console.log(str.slice(0, 4)); //обрезает с какого символа
+    // console.log(str.substr(8, 5 )); //обрезает с какого и сколько
+    // console.log(str.split(" ")); //разбивает на массив
+    // console.log(str.replace("лор", "fock")); //заменяет слова
+    // console.log(str.indexOf('a')); //выводит index символа
+    // console.log(str.toUpperCase()); //вверхний регистр
+    // console.log(str.toLowerCase()); //нижний регистр
 }
 window.onload = init;
