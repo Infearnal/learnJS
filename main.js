@@ -1,32 +1,41 @@
 function init() {
 
-    var arr = [1, 2, 'str', {}];
-    // console.log(arr[2]);
+    //LOOPS
+    //for
+    // for(/*выражение*/ инициализация; тест; инкримент(декримент)) {
+    //     //тело цикла
+    // }
 
-    //add
-    arr[399] = 'fock';
-    console.log(arr.length);
+    // var arr = [1, 2, 3, 4],
+    //     sum = 0;
+    // for(var i = 0; i < arr.length; i++) {
+    //     sum = sum + arr[i];
+    // }
+    // console.log(sum);
 
-    //delete
-    delete arr[1]; //создает дырку
-    arr.splice(1, 1); //delete
-    // console.log(arr);
-    arr.length; //длина 
-    var matrix = [
-        [1,2,3],
-        [4,5,6],
-        [7,8,9]
-    ];
-    // console.log(matrix[0][1]);
-    var newArr = arr.concat(matrix); //обьеденяет массивы
-    arr.join('| '); //преобразует в строку и разделяет чемто
-    arr.push('fock'); //доб. последний элемент
-    arr.pop('fock'); //delete последний элемент
-    arr.unshift('fock'); //доб. первый элемент
-    arr.shift('fock'); //delete перавый элемент
-    arr.reverse(); //наоборот
-    arr.slice(1, 2); //с какого по какой index вырезать
-    arr.sort(); //сортирует массив(неправильно числа)
+    //for in - цикл по обьекту 
+    // var obj = {
+    //     prop: 'one',
+    //     name: 'Roman'
+    // }
+    // var prop;
+    // for(prop in obj) {
+    //     if(obj.hasOwnProperty(prop)) { // обязательная проверка
+    //         console.log(prop + ' : ' + obj[prop]);
+    //     }
+    // }
+
+    //while
+    // var k = 0;
+    // while(k < 10) {
+    //     console.log(k++);
+    // }
+
+    //do while - 1 раз но обязательно выведется
+    var h = 0;
+    do {
+        console.log(h++);
+    } while (h < 10);
 
 }
 window.onload = init;
