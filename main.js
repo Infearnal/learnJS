@@ -1,34 +1,39 @@
 (function() {
 
-    //FUNCTIONS TIME
-    //setTimeout
-    // var startTimer = function() {
-    //     console.log('function startTimer gogogogo))');
+    //СОБЫТИЯ - EVENTS
+
+    // var elem = document.getElementById('box');
+    // elem.onclick = function() {
+    //     this.style.backgroundColor = 'red';
     // };
-    // var timer = setTimeout(startTimer, 3000);
-    // console.log('fock');
 
-    // //clearTimeout
-    // clearTimeout(timer);
+    var changeColor = function(e) {
+        console.log(e.type); //тип события (click, ...)
+        console.log(e.target); //инициатор события (сам елемент)
+        console.log(e.currentTarget); //elem на котором висит обработчик
+        console.log(e.preventDafault()); //отключает логику по умолчанию
+        if(this.id === 'day') {
+            document.body.className = 'day';
+        } else if (this.id === 'night') {
+            document.body.className = 'night';
+        }
+    };
 
-    // ANIMATION
-    var delay = 10,
-        i = 0,
-        animCircle = function(pixels) {
-            var elem = document.getElementById('circle'),
-                bottom = elem.offsetTop;
-                console.log(bottom);
-            if((pixels > 0 && bottom > 250) || (pixels < 0 && bottom < 50)) {
-                clearInterval(timer);
-                timer = setIntervar(function() {
-                    animCircle(pixels * -1)
-                }, delay);
-            }
-            elem.style.top = bottom + pixels + 'px';
-            i++;
-        };
-    var timer = setInterval(function() {
-        animCircle(20);
-    }, delay);
+    var sayHi = function() {
+        var currentBodyClass = document.body.className;
+        alert('Hallo! Now is ' + currentBodyClass);
+    };
+
+    // addEventListener('событие', 'функция', 'true(по умолчанию)');
+    // true - capturing(захват) => при сабытии проходит путь в 3 этапа начиная с HTML=>BODY=>и т.д., захват elem а потом всплытие
+    // false - bubling(всплытие) => только захват елемента и всплытие;
+
+    var buttons = document.getElementsByTagName('button');
+    for(var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', changeColor, false);
+        buttons[i].addEventListener('click', sayHi, false);
+
+        // buttons[i].removeEventLinstener('click', sayHi, false); //удаляет событие(
+    }
 
 })();

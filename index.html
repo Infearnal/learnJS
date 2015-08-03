@@ -5,22 +5,28 @@
     <title>LoftBlog JS</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        #circle {
+        #box {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
-            box-shadow: inset 0px 0px 30px #2d2;
-            background-color: yellow;
-            border: 1px solid #000;
-            position: absolute;
-            top: 50px;
-            left: 50px;
+            background: green;
+        }
+
+        .day {
+            color: #000;
+            background: #fff;
+        }
+
+        .night {
+            color: #fff;
+            background: #000;
         }
     </style>
 </head>
-<body>
-    <div id="circle"></div>
-
+<body class="day">
+    <!-- <div id="box"></div> -->
+    <p>event in JavaScript</p>
+    <button id="day">Day</button>
+    <button id="night">Night</button>
     <script src="main.js"></script>
 </body>
 </html>
