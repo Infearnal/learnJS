@@ -1,22 +1,21 @@
-function init() {
+// function init() {
+ 
+     var foo = 'str';
+     console.log(foo);
 
-    //замыкание - closure
+     console.log(navigator.userAgent);
+     console.log(navigator.platform);
 
-    var firstFunc = function() {
-        var index = 5;
+     console.log(screen.width +  " x " +  screen.height);
 
-        return function() {
-            return index;
-        }
-    }
+     // console.log(location.reload()); //перезагружает браузер
+     // console.log(location);
+     // console.log(location.toString());
+     // console.log(location.href);
 
-    var secondFunc = function() {
-        var index = 15;
+     // console.log(frames);
 
-        console.log(firstFunc()());
-    }
+     console.log(history);
 
-    secondFunc(); //returned 5
-
-}
-window.onload = init; 
+// }
+// window.onload = init; 
