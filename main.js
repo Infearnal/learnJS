@@ -1,30 +1,22 @@
-(function() {
+// (function() {
+    var doc = document;
+    var elem = doc.createElement('p'), //создать узел елемента
+        // content = doc.createTextNode('dynamic element'), //создать текстовый узел
+        wrap = doc.getElementById('wrap');
+        elem.innerHTML = '<strong>dynamic element</strong>';
 
-    var elem = document.getElementsByTagName('p'), //Node list (array)
-        classElem = document.getElementsByClassName('paragraph'),
-        idElem = document.getElementById('four'),
-        elemSelector = document.querySelector('p'), //view first elem
-        elemSelectors = document.querySelectorAll('p'), //all elem - getElementsByTagName работает быстрее
-        elemInDiv = document.querySelectorAll('div p'),
-        idElemSelector = document.querySelector('#four');
+    //prependChild - ищет родителя елемента
+    wrap.parentNode.appendChild(elem); //вставляет елемент
+    // wrap.parentNode.insertBefore(elem, wrap); //всавляет('перед какимто елементом', 'какой елемент')
+    // wrap.parentNode.replaceChild(elem, wrap);
+    elem.setAttribute('data-type', 'data');
 
-        // console.log(idElemSelector);
-        // console.log(idElem);
-        // console.log(classElem);
+    elem.id = 'fock';
+    elem.appendChild(content);
     // console.log(elem);
-    for(var i = 0; i < elem.length; i++) {
-        // console.log(elem[i].tagName); //работа с елементами
-        // console.log(elem[i].parentNode);
-        // console.log(elem[i].previousSibling.previousSibling); //предыдущий родственник (2 раза так как считает пробельные ноды)
-        // console.log(elem[i].nextSibling.nextSibling);
-        // console.log(elem[i].nodeName); //работа с любыми узлами
-        // console.log(elem[i].nodeType); 
-    }
 
-    // console.log(document.querySelector('div').childNodes);
-    // console.log(document.querySelector('div').children);
-    // console.log(document.querySelector('div').lastChild);
-    // console.log(document.querySelector('div').firstChild);
-    // console.log(document.querySelector('div').innerHTML);
+    //кеширование переменных (оптимизация, скорость)
 
-})();
+
+
+// })();
