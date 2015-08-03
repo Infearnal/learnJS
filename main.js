@@ -1,22 +1,34 @@
 (function() {
 
-    var doc = document,
-        div = doc.getElementById('test');
-        style = div.style;
+    //FUNCTIONS TIME
+    //setTimeout
+    // var startTimer = function() {
+    //     console.log('function startTimer gogogogo))');
+    // };
+    // var timer = setTimeout(startTimer, 3000);
+    // console.log('fock');
 
-    // style.color = 'blue';
-    // style.backgroundColor = 'yellow';
-    // style.border = '1px solid black';
-    // style.padding = '20px';
-    //!!! не рекомендуется писать style in js
-    div.className = 'style';
+    // //clearTimeout
+    // clearTimeout(timer);
 
-    // classList don't work in IE
-    div.classList.add('css-class'); // add class
-    div.classList.remove('style'); // remove class
-    // div.classList.toggle('css-class'); // if has class add or delete
-
-
-    console.log(div);
+    // ANIMATION
+    var delay = 10,
+        i = 0,
+        animCircle = function(pixels) {
+            var elem = document.getElementById('circle'),
+                bottom = elem.offsetTop;
+                console.log(bottom);
+            if((pixels > 0 && bottom > 250) || (pixels < 0 && bottom < 50)) {
+                clearInterval(timer);
+                timer = setIntervar(function() {
+                    animCircle(pixels * -1)
+                }, delay);
+            }
+            elem.style.top = bottom + pixels + 'px';
+            i++;
+        };
+    var timer = setInterval(function() {
+        animCircle(20);
+    }, delay);
 
 })();
