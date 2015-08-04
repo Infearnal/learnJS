@@ -5,10 +5,14 @@
     <title>LoftBlog JS</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        * {
+            transition: color .5s , background 1s linear;
+        }
         #box {
             width: 100px;
             height: 100px;
             background: green;
+            color: #000;
         }
 
         .day {
@@ -27,6 +31,8 @@
     <p>event in JavaScript</p>
     <button id="day">Day</button>
     <button id="night">Night</button>
+
+    <script src="events.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
